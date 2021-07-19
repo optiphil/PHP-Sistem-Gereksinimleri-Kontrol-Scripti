@@ -1,41 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Uygulama Adı - Sistem Gereksinimleri</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="logo.png"/>
-    <link href="style.css" rel="stylesheet"/>
-</head>
-<body>
-    <?php
-    $error = false;
-    if (phpversion() < "7.1") {
-        $error = true;
-        $requirement1 = "<span class='label label-warning'>PHP versiyonunuz " . phpversion() . "</span>";
-    } else {
-        $requirement1 = "<span class='label label-success'>v." . phpversion() . "</span>";
-    }
-
-    if (!extension_loaded('mysqli')) {
-        $error = true;
-        $requirement2 = "<span class='label label-warning'>Pasif</span>";
-    } else {
-        $requirement2 = "<span class='label label-success'>Aktif</span>";
-    }
-
-    if (!extension_loaded('pdo')) {
-        $error = true;
-        $requirement3 = "<span class='label label-warning'>Pasif</span>";
-    } else {
-        $requirement3 = "<span class='label label-success'>Aktif</span>";
-    }
-
-    if (!extension_loaded('curl')) {
-        $error = true;
-        $requirement4 = "<span class='label label-warning'>Pasif</span>";
-    } else {
         $requirement4 = "<span class='label label-success'>Aktif</span>";
     }
 
@@ -60,8 +24,7 @@
         $requirement7 = "<span class='label label-success'>Aktif</span>";
     }
 
-    if (!extension_loaded('gd')) {
-        $error = true;
+    if (!extens
         $requirement9 = "<span class='label label-warning'>Pasif</span>";
     } else {
         $requirement9 = "<span class='label label-success'>Aktif</span>";
